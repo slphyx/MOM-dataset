@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOM Dataset</title>
+  <style>
+    :root {
+      --blue: #1f4e79;
+      --light-blue: #eaf3fb;
+      --accent: #4f86c6;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #f8fbff;
+      --card: #ffffff;
+      --border: #dbe7f3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      background: linear-gradient(135deg, var(--blue), var(--accent));
+      color: white;
+      padding: 64px 0 52px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 44px;
+      line-height: 1.1;
+      margin: 0 0 12px;
+    }
+    .subtitle {
+      font-size: 18px;
+      max-width: 650px;
+      opacity: 0.96;
+      margin-bottom: 22px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+    .btn-primary {
+      background: white;
+      color: var(--blue);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+    .logo-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+    .logo-card img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 14px;
+      background: white;
+      padding: 10px;
+    }
+    section {
+      padding: 56px 0;
+    }
+    h2 {
+      font-size: 30px;
+      margin: 0 0 14px;
+      color: var(--blue);
+    }
+    .lead {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(31, 78, 121, 0.06);
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: var(--blue);
+      font-size: 20px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .stat {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+    }
+    .stat .num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--blue);
+    }
+    .stat .label {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+    ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+    footer {
+      padding: 30px 0 50px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .small {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    code.inline {
+      background: var(--light-blue);
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: var(--blue);
+    }
+    @media (max-width: 860px) {
+      .hero, .split, .grid, .stats { grid-template-columns: 1fr; }
+      h1 { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <div>
+        <div class="badge">Malaria microscopy benchmark project</div>
+        <h1>MOM Dataset</h1>
+        <div class="subtitle">The Mahidol Oxford Malaria Microscopy Benchmark Dataset — a proposed standardised and well-annotated dataset for malaria image analysis.</div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about">About the dataset</a>
+          <a class="btn btn-secondary" href="#download">Download & citation</a>
+        </div>
+      </div>
+      <div class="logo-card">
+        <img src="mom-logo.png" alt="MOM Dataset logo" />
+        <div class="small" style="margin-top:10px; color: rgba(255,255,255,0.92);">Add your chosen MOM logo here as <code class="inline">mom-logo.png</code></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p class="lead">The MOM Dataset is designed as a benchmark resource for malaria microscopy research. The aim is to support reproducible development and evaluation of AI models for parasite detection, parasite counting, and stage classification.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Why this matters</h3>
+          <p>Current malaria image research often lacks a standard dataset, standard annotation protocol, and standard evaluation method.</p>
+        </div>
+        <div class="card">
+          <h3>Initial focus</h3>
+          <p>The first version is planned around <em>Plasmodium falciparum</em> thin blood smear microscopy images with instance-level annotations.</p>
+        </div>
+        <div class="card">
+          <h3>Intended use</h3>
+          <p>The dataset can support benchmarking of AI approaches across parasite detection, parasite counting, and stage classification tasks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Planned dataset summary</h2>
+      <div class="stats">
+        <div class="stat"><div class="num">~1,000</div><div class="label">Microscopy images</div></div>
+        <div class="stat"><div class="num">1</div><div class="label">Initial species focus</div></div>
+        <div class="stat"><div class="num">3+</div><div class="label">AI tasks supported</div></div>
+        <div class="stat"><div class="num">3-way</div><div class="label">Train / val / test split</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div>
+        <h2>Annotation structure</h2>
+        <div class="card">
+          <p>Each microscopy image may contain multiple parasite instances. Each parasite can be annotated with:</p>
+          <ul>
+            <li>Bounding box</li>
+            <li>Stage label</li>
+            <li>Morphology-related features</li>
+            <li>Expert validation</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2>Evaluation protocol</h2>
+        <div class="card">
+          <p>To reduce data leakage and improve reliability, the benchmark design should include:</p>
+          <ul>
+            <li>Training, validation, and independent test sets</li>
+            <li>Slide-level or patient-level separation</li>
+            <li>Clear task definitions and reporting standards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="container">
+      <h2>Download, license, and citation</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Repository</h3>
+          <p>Add your GitHub repository link here.</p>
+          <p><a href="#">github.com/slphyx/MOM-dataset</a></p>
+        </div>
+        <div class="card">
+          <h3>Data license</h3>
+          <p>Recommended: <strong>CC BY 4.0</strong> for images, annotations, and associated metadata.</p>
+        </div>
+        <div class="card">
+          <h3>Citation</h3>
+          <p>Replace this with your final citation, DOI, preprint, or dataset paper once available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="card">
+        <p><strong>Project:</strong> MOM Dataset</p>
+        <p><strong>Institution:</strong> Faculty of Tropical Medicine, Mahidol University</p>
+        <p><strong>Email:</strong> nok@tropmedres.ac</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© MOM Dataset project. Built for GitHub Pages. Replace placeholder links, email, and logo image before publishing.</p>
+    </div>
+  </footer>
+</body>
+</html>
